@@ -11,8 +11,8 @@
 #'
 #' @examples \dontrun{myboxcox(x)}
 myboxcox <- function(x) {
-  ylm <- stats::lm(x~1)
-  out <- boxcox(ylm)
+  x=x
+  out <- boxcox(stats::lm(x ~ 1))
   ind <- which.max(out$y)
   out$x[ind]
 }

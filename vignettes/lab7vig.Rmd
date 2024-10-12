@@ -1,0 +1,52 @@
+---
+title: "The RosaMATH5793lab7 Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{The RosaMATH5793lab7 Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.align = 'center',
+  fig.height = 5,
+  fig.width = 7
+)
+```
+
+```{r setup}
+library(RosaMATH5793lab7)
+```
+
+# Introduction
+
+This package contains three functions which help in identifying data normality. We will explore each function with the included data sets.
+
+# `propnorm()`
+
+```{r}
+facts <- c("Gender", "Socio")
+propnorm(t46, facts)
+```
+
+This function analyzes the data for univariate and multivariate normality.
+
+# `statdist()`
+
+```{r}
+statdist(cars, 0.5)
+```
+
+This function delves further into multivariate normality checks.
+
+# `myboxcox`
+
+```{r}
+x <- t41$Radiation
+myboxcox(x = x)
+```
+
+This function maximizes the log-likelihood for $\widehat{\lambda}_{MLE}$. 
